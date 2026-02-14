@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AvoRunner - 2D Platformer Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="hud">
+            <div class="hud-section">
+                <span id="level">Nivel: 1</span>
+            </div>
+            <div class="hud-section">
+                <span id="score">Puntos: 0</span>
+            </div>
+            <div class="hud-section">
+                <span id="lives">Vidas: ❤️❤️❤️</span>
+            </div>
+        </div>
+        <div id="gameMenu" class="menu">
+            <div class="menu-content">
+                <h1>🥑 AvoRunner 🥑</h1>
+                <p>¡Ayuda a Avo a superar todos los niveles!</p>
+                <button id="startBtn" class="menu-btn">Comenzar Juego</button>
+                <button id="instructionsBtn" class="menu-btn">Controles</button>
+            </div>
+        </div>
+        <div id="instructionsMenu" class="menu hidden">
+            <div class="menu-content">
+                <h1>Controles</h1>
+                <p>⬅️ A - Mover izquierda</p>
+                <p>➡️ D - Mover derecha</p>
+                <p>⬆️ ESPACIO - Saltar</p>
+                <p>🌱 Recolecta semillas para puntos</p>
+                <p>🚩 Llega a la meta para avanzar</p>
+                <button id="backBtn" class="menu-btn">Volver</button>
+            </div>
+        </div>
+        <div id="levelComplete" class="menu hidden">
+            <div class="menu-content">
+                <h1>¡Nivel Completado!</h1>
+                <p id="levelCompleteText"></p>
+                <button id="nextLevelBtn" class="menu-btn">Siguiente Nivel</button>
+            </div>
+        </div>
+        <div id="gameOver" class="menu hidden">
+            <div class="menu-content">
+                <h1>Game Over</h1>
+                <p id="gameOverText"></p>
+                <button id="restartBtn" class="menu-btn">Reintentar</button>
+                <button id="menuBtn" class="menu-btn">Menú Principal</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/physics.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/level.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
